@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>Wedding Invitation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Playfair Display', serif;
+            background-color: #f8f8f6;
+            display: flex;
+            justify-content: center;
+        }
+
+        .script {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .underline-dash {
+            border-bottom: 1px dashed #000;
+            display: inline-block;
+            padding-bottom: 4px;
+        }
+
+        /* Fade top effect */
+        .fade-top {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .fade-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0));
+            z-index: 5;
+        }
+
+        /* Mobile box layout */
+        .mobile-box {
+            width: 100%;
+            max-width: 420px;
+            background-color: rgba(248, 253, 255);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mobile-box::before {
+            opacity: 0.1;
+        }
+
+        /* Smooth fade bottom overlay */
+        .fade-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to top, #f8fbfd, rgba(248, 251, 253, 0.85), transparent);
+            filter: blur(0.5px);
+            z-index: 5;
+        }
+
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Wedding Invitation -->
+    <section class="mobile-box">
+
+        <div style="
+      background-image: url('bg.webp');
+      background-size: cover;
+      background-position: center 10%;
+      background-blend-mode: multiply;
+    " class="fade-section text-center px-6 py-12 backdrop-blur-[1.5px]">
+
+            <!-- Header -->
+            <div class="text-center">
+                <h2 class="text-gray-800 text-3xl tracking-[0.3em] uppercase font-light leading-tight">
+                    <span class="block">Wedding</span>
+                    <span class="block">Invitation</span>
+                </h2>
+                <p
+                    class="text-[#b48b2b] mt-2 text-2xl tracking-widest font-medium inline-block border-b border-[#b48b2b] pb-1">
+                    21.11.2025
+                </p>
+            </div>
+
+            <!-- Couple -->
+            <div class="mt-[3rem] flex items-center justify-center relative" style="height: 60px;">
+                <p class="script text-[2.2rem] text-gray-800 absolute left-[2%] top-[-50%]">Trọng Tấn</p>
+                <img src="png.png" alt="&" class="h-[7rem] absolute left-[53%] transform -translate-x-1/2">
+                <p class="script text-[2.2rem] text-gray-800 absolute right-[2%] bottom-[-50%]">Tố Như</p>
+            </div>
+
+            <!-- Invitation text -->
+            <div class="mt-[2rem]">
+                <p class="text-gray-1000 mt-6 text-[1rem] leading-tight">Trân Trọng Kính Mời:</p>
+                <p class="script text-[1.5rem] text-gray-900 italic mt-5 inline-block relative 
+          after:content-[''] after:absolute after:left-1/2 after:top-[70%] after:-translate-x-1/2 
+          after:w-[200px] after:border-b-[1.5px] after:border-dashed after:border-gray-800 
+          after:-z-10 after:mt-0 after:transform">
+                    Quý Khách
+                </p>
+            </div>
+
+            <!-- Couple photo -->
+            <div class="mt-6 overflow-hidden relative">
+                <div class="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-transparent z-10 h-1/3"></div>
+                <img src="2.jpg" alt="Couple Photo" class="w-full border-none object-cover relative z-0">
+            </div>
+
+        </div>
+
+        <!-- Family Info -->
+        <div class="fade-section mt-10 text-center px-2">
+            <div
+                class="flex flex-wrap justify-center text-[0.95rem] font-extrabold text-gray-900 tracking-tight overflow-hidden">
+                <!-- Nhà Trai -->
+                <div class="w-1/2 min-w-[180px] border-r border-gray-400 pr-3 text-right break-words">
+                    <p class="uppercase underline mb-1 tracking-wider">Nhà Trai</p>
+                    <p class="uppercase">Nguyễn Văn Xuân</p>
+                    <p class="uppercase">Trần Thị Tuyết Nhung</p>
+                    <p
+                        class="text-[0.85rem] leading-snug mt-2 font-normal normal-case text-gray-700 whitespace-normal break-words">
+                        Nhà số 2 ngách 1 ngõ 175 phố Định Công,<br>
+                        Phường Định Công, Hà Nội
+                    </p>
+                </div>
+
+                <!-- Nhà Gái -->
+                <div class="w-1/2 min-w-[180px] pl-3 text-left break-words">
+                    <p class="uppercase underline mb-1 tracking-wider">Nhà Gái</p>
+                    <p class="uppercase">Trần Công Tuấn</p>
+                    <p class="uppercase">Nguyễn Thị Hiền</p>
+                    <p
+                        class="text-[0.85rem] leading-snug mt-2 font-normal normal-case text-gray-700 whitespace-normal break-words">
+                        Số 265, khu đô thị Kỳ Bá,<br>
+                        Phường Trần Lãm, Thành phố Thái Bình
+                    </p>
+                </div>
+            </div>
+
+            <!-- Announcement -->
+            <p class="mt-8 text-gray-700 text-[1rem] italic">
+                Trân Trọng Báo Tin Lễ Thành Hôn Của
+            </p>
+
+            <!-- Couple Names -->
+            <div class="mt-[5rem] flex items-center justify-center relative" style="height: 60px;">
+                <p class="script text-[2.2rem] text-gray-800 absolute left-[2%] top-[-100%]">Phạm Quốc Huy</p>
+                <span class="script text-[2.2rem] text-gray-800 absolute left-[53%] transform -translate-x-1/2">&</span>
+                <p class="script text-[2.2rem] text-gray-800 absolute right-[2%] bottom-[-100%]">Bùi Thị Tố Như</p>
+            </div>
+        </div>
+
+        <!-- Save The Date Section -->
+        <div class="mt-16 text-center relative overflow-hidden">
+            <div class="relative w-full h-[340px] overflow-hidden">
+                <!-- Sharp, clear image -->
+                <img src="3.jpg" alt="Save the Date"
+                    class="w-full h-full object-cover object-top scale-[1.01] brightness-[1.02]">
+
+                <!-- Gentle fade bottom -->
+                <div class="absolute bottom-0 left-0 w-full h-[40%] 
+                bg-gradient-to-t from-[#f8fbfd] via-[#f8fbfdc7] to-transparent"></div>
+
+                <!-- Elegant Save The Date text -->
+                <p class="absolute bottom-[1.5rem] left-1/2 transform -translate-x-1/2 
+              text-gray-800 text-[1.9rem] script tracking-wide">
+                    Save The Date
+                </p>
+            </div>
+        </div>
+
+        <!-- Ceremony Info -->
+        <div class="fade-section mt-10 text-left px-6 pb-12">
+            <div class="flex justify-between items-center mb-1">
+                <p class="text-gray-800 font-semibold text-[0.9rem] border-b border-gray-300 flex-1"></p>
+                <h3 class="text-gray-900 font-bold text-[1.05rem] uppercase ml-3">Lễ Rước Dâu</h3>
+            </div>
+
+            <p class="text-gray-800 mt-2 text-[0.95rem]">Thứ 7 - 03:00 AM</p>
+            <p class="text-gray-800">01.11.2025</p>
+            <p class="text-gray-500 italic text-[0.9rem]">Nhằm Ngày 12 Tháng 09 Năm Ất Tỵ</p>
+            <p class="text-gray-900 font-medium mt-1">Tại Tư Gia Nhà Trai</p>
+
+            <div class="mt-10 flex justify-between items-center mb-1">
+                <h3 class="text-gray-900 font-bold text-[1.05rem] uppercase mr-3">Tiệc Mừng Lễ Thành Hôn</h3>
+                <p class="text-gray-800 font-semibold text-[0.9rem] border-b border-gray-300 flex-1"></p>
+            </div>
+
+            <p class="text-gray-800 mt-2 text-[0.95rem]">Thứ 7 - 11:00 AM</p>
+            <p class="text-gray-800">01.11.2025</p>
+            <p class="text-gray-500 italic text-[0.9rem]">Nhằm Ngày 12 Tháng 09 Năm Ất Tỵ</p>
+            <p class="text-gray-900 font-medium mt-1">Tại Trung tâm tiệc cưới Xanh Palace Hào Nam</p>
+        </div>
+
+        <!-- Calendar Section -->
+        <div class="fade-section mt-5 text-center relative overflow-hidden">
+            <div class="relative w-full h-[300px] overflow-hidden flex justify-center items-center">
+                <!-- Background image -->
+                <img src="5.jpg" alt="Calendar Background"
+                    class="absolute inset-0 w-full h-full object-cover object-center opacity-100">
+                <div class="absolute inset-0 bg-gradient-to-r from-[#f8fbfd]/95 via-[#f8fbfd]/90 to-[#f8fbfd]/70"></div>
+
+                <!-- Content -->
+                <div class="relative z-10 flex w-full justify-between items-center px-6">
+                    <!-- Date Column -->
+                    <div class="text-left leading-none">
+                        <p class="text-[2.5rem] font-light text-gray-900">21</p>
+                        <p class="text-[2.5rem] font-light text-gray-900">11</p>
+                        <p class="text-[2.5rem] font-light text-gray-900">25</p>
+                    </div>
+
+                    <!-- Calendar -->
+                    <div class="flex-1 ml-6">
+                        <table class="w-full text-center text-gray-700 text-[0.85rem]">
+                            <thead>
+                                <tr class="font-semibold text-gray-900">
+                                    <th>T2</th>
+                                    <th>T3</th>
+                                    <th>T4</th>
+                                    <th>T5</th>
+                                    <th>T6</th>
+                                    <th>T7</th>
+                                    <th>CN</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td> </td>
+                                    <td>1</td>
+                                    <td> </td>
+                                    <td>2</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr>
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td class="relative font-semibold text-[#b48b2b]">
+                                        21
+                                        <span
+                                            class="absolute inset-0 border-[2px] border-[#b48b2b] rounded-full w-6 h-6 mx-auto top-[2px] left-0 right-0"></span>
+                                    </td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr>
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="w-[70%] mx-auto mt-5 border-t-[2px] border-gray-400 opacity-60"></div>
+        <!-- Wedding Image Carousel -->
+        <div class="fade-section mt-5 relative w-full overflow-hidden shadow-lg">
+            <!-- Carousel container -->
+            <div id="carousel" class="relative w-full h-[340px]">
+                <div class="carousel-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out">
+                    <img src="7.jpg" class="w-full h-full object-cover object-center" alt="Wedding Photo 1">
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+                    <img src="8.jpg" class="w-full h-full object-cover object-center" alt="Wedding Photo 2">
+                </div>
+                <div class="carousel-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
+                    <img src="9.jpg" class="w-full h-full object-cover object-center" alt="Wedding Photo 3">
+                </div>
+            </div>
+
+            <!-- Dots -->
+            <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="dot w-2.5 h-2.5 bg-gray-400 rounded-full"></button>
+                <button class="dot w-2.5 h-2.5 bg-gray-300 rounded-full"></button>
+                <button class="dot w-2.5 h-2.5 bg-gray-300 rounded-full"></button>
+            </div>
+        </div>
+
+        <!-- Divider Line -->
+        <div class="w-[70%] mx-auto my-10 border-t-[1.5px] border-gray-400 opacity-60"></div>
+
+        <!-- Timeline Section -->
+        <div class="fade-section text-center mt-10 px-6">
+            <h3 class="text-gray-900 font-bold text-[1.2rem] uppercase tracking-wide mb-8">Timeline</h3>
+
+            <!-- Wrapper for the entire timeline -->
+            <div class="relative max-w-[380px] mx-auto flex justify-between items-center">
+
+                <!-- Connector line behind dots -->
+                <div class="absolute left-0 right-0 top-[85%] transform -translate-y-1/2 h-[4px] bg-[#ff3b3b] z-0">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="text-[0.85rem] font-semibold text-gray-900 uppercase">Lễ Rước Dâu</div>
+                    <div class="text-[0.9rem] text-gray-800 font-medium mt-1">03:00</div>
+                    <div class="w-6 h-6 bg-white border-[4px] border-[#ff3b3b] rounded-full mt-3"></div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="text-[0.85rem] font-semibold text-gray-900 uppercase">Đón Khách</div>
+                    <div class="text-[0.9rem] text-gray-800 font-medium mt-1">11:00</div>
+                    <div class="w-6 h-6 bg-white border-[4px] border-[#ff3b3b] rounded-full mt-3"></div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="relative z-10 flex flex-col items-center">
+                    <div class="text-[0.85rem] font-semibold text-gray-900 uppercase">Khai Tiệc</div>
+                    <div class="text-[0.9rem] text-gray-800 font-medium mt-1">11:30</div>
+                    <div class="w-6 h-6 bg-white border-[4px] border-[#ff3b3b] rounded-full mt-3"></div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- Divider Line -->
+        <div class="w-[70%] mx-auto my-10 border-t-[1.5px] border-gray-400 opacity-60"></div>
+
+        <!-- Venue Section -->
+        <div class="fade-section text-center mt-8 px-6 pb-12">
+            <h3 class="text-gray-900 font-bold text-[1.2rem] uppercase tracking-wide mb-5">Địa Điểm Tổ Chức</h3>
+
+            <!-- Venue Info -->
+            <div class="border border-gray-300 rounded-md shadow-sm bg-white p-3 mb-4">
+                <p class="text-[0.9rem] font-bold uppercase text-gray-900">
+                    Trung Tâm Tiệc Cưới Xanh Palace Hào Nam <br> Sảnh 1 - Tầng 2
+                </p>
+                <p class="text-[0.85rem] text-gray-800 mt-1 leading-tight">
+                    135 Hào Nam, Chợ Dừa, Đống Đa, Hà Nội
+                </p>
+                <a href="https://maps.app.goo.gl/V4JfbsMZJ6rf7LMp8" target="_blank"
+                    class="mt-3 inline-block border border-gray-600 text-gray-700 px-4 py-1 rounded text-[0.85rem] hover:bg-gray-100 transition">
+                    Xem Chỉ Đường
+                </a>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.639791578438!2d105.82113247593592!3d21.006540380634735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab7a9d53fafd%3A0x6c8266d7d6e82c69!2sXanh%20Palace%20H%C3%A0o%20Nam!5e0!3m2!1svi!2s!4v1695896237014!5m2!1svi!2s"
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="rounded-md shadow-sm mt-3">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="fade-section">
+            <div class="text-center mb-10 px-6">
+                <!-- Countdown boxes -->
+                <div id="countdown" class="flex justify-center gap-4">
+                    <div class="w-16 h-20 border border-gray-400 rounded-xl flex flex-col items-center justify-center">
+                        <p id="days" class="text-[1.3rem] font-light text-gray-800">00</p>
+                        <p class="text-[0.8rem] text-gray-700 mt-1">Ngày</p>
+                    </div>
+                    <div class="w-16 h-20 border border-gray-400 rounded-xl flex flex-col items-center justify-center">
+                        <p id="hours" class="text-[1.3rem] font-light text-gray-800">00</p>
+                        <p class="text-[0.8rem] text-gray-700 mt-1">Giờ</p>
+                    </div>
+                    <div class="w-16 h-20 border border-gray-400 rounded-xl flex flex-col items-center justify-center">
+                        <p id="minutes" class="text-[1.3rem] font-light text-gray-800">00</p>
+                        <p class="text-[0.8rem] text-gray-700 mt-1">Phút</p>
+                    </div>
+                    <div class="w-16 h-20 border border-gray-400 rounded-xl flex flex-col items-center justify-center">
+                        <p id="seconds" class="text-[1.3rem] font-light text-gray-800">00</p>
+                        <p class="text-[0.8rem] text-gray-700 mt-1">Giây</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RSVP Form Section -->
+            <div class="text-center mt-12 px-6">
+                <form class="max-w-[350px] mx-auto space-y-4">
+                    <!-- Tên -->
+                    <input type="text" placeholder="Tên của bạn là?"
+                        class="w-full border border-gray-400 rounded-md py-2 px-3 text-gray-800 text-[0.95rem] focus:outline-none focus:border-[#b48b2b]"
+                        required>
+
+                    <!-- Quan hệ với Dâu Rể -->
+                    <input type="text" placeholder="Bạn là gì của Dâu Rể nhỉ?"
+                        class="w-full border border-gray-400 rounded-md py-2 px-3 text-gray-800 text-[0.95rem] focus:outline-none focus:border-[#b48b2b]"
+                        required>
+
+                    <!-- Lời chúc -->
+                    <textarea placeholder="Gửi lời chúc đến Dâu Rể nhé!" rows="2"
+                        class="w-full border border-gray-400 rounded-md py-2 px-3 text-gray-800 text-[0.95rem] focus:outline-none focus:border-[#b48b2b]"></textarea>
+
+                    <!-- Xác nhận tham dự -->
+                    <select
+                        class="w-full border border-gray-400 rounded-md py-2 px-3 text-gray-800 text-[0.95rem] focus:outline-none focus:border-[#b48b2b]"
+                        required>
+                        <option value="" disabled selected> Bạn Có Tham Dự Không? </option>
+                        <option> Có, Mình Sẽ Đến Chung Vui 🎉 </option>
+                        <option> Xin Lỗi, Mình Không Tham Dự Được 💌 </option>
+                    </select>
+
+                    <!-- Submit Button -->
+                    <button type="submit"
+                        class="w-full border border-gray-800 text-gray-900 font-semibold tracking-wide py-2 mt-3 rounded-md hover:bg-gray-900 hover:text-white transition-all shadow-md">
+                        GỬI LỜI NHẮN & XÁC NHẬN
+                    </button>
+                </form>
+            </div>
+
+            <div class="text-center mt-5 mb-16 px-6 ">
+                <!-- Gift Button -->
+                <button id="giftButton"
+                    class="mx-auto w-[130px] h-[130px] border border-gray-400 rounded-xl shadow-md flex flex-col items-center justify-center hover:scale-[1.05] transition-transform">
+                    <p class="text-[1rem] font-light text-gray-800 mb-2">GỬI MỪNG CƯỚI</p>
+                    <img src="giftbox.webp" alt="Gift Box" class="w-[70px] h-[70px]">
+                </button>
+            </div>
+        </div>
+
+        <!-- Gift Modal -->
+        <div id="giftModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50 backdrop-blur-sm">
+            <div class="bg-white rounded-xl shadow-lg p-6 w-[90%] max-w-[360px] text-center relative">
+
+                <!-- Close Button -->
+                <button id="closeModal"
+                    class="absolute top-2 right-3 text-gray-600 text-2xl font-semibold hover:text-black">&times;</button>
+
+                <!-- Modal Content -->
+                <h3 class="script text-[1.8rem] text-gray-900 mb-4">Gửi Mừng Cưới</h3>
+                <div class="flex justify-center mb-4">
+                    <img src="qr.png" alt="QR Code"
+                        class="w-[220px] h-[220px] border-[8px] border-[#0c2340] rounded-md">
+                </div>
+                <p class="text-gray-900 font-bold text-[1rem]">VIB - TRAN THUY LINH</p>
+                <p class="text-gray-800 text-[0.95rem]">662288626</p>
+            </div>
+        </div>
+
+        <section class="mt-16 mb-15 px-6 fade-section">
+            <h3 class="text-center text-gray-900 font-bold text-[1.2rem] uppercase tracking-wide mb-8">Album Cưới</h3>
+
+            <div class="columns-2 gap-4 [column-fill:_balance]" id="gallery">
+                <img src="1.jpg" alt="Wedding Photo 1"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+                <img src="2.jpg" alt="Wedding Photo 2"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+                <img src="3.jpg" alt="Wedding Photo 3"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+                <img src="4.jpg" alt="Wedding Photo 4"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+                <img src="5.jpg" alt="Wedding Photo 5"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+                <img src="6.jpg" alt="Wedding Photo 6"
+                    class="w-full mb-4 rounded-lg shadow-md hover:scale-[1.02] transition-transform duration-300 break-inside-avoid cursor-pointer">
+            </div>
+
+            <!-- Popup Lightbox -->
+            <div id="popup"
+                class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 transition-opacity duration-300">
+                <div class="relative max-w-[90%] max-h-[90%]">
+                    <img id="popup-img" src=""
+                        class="rounded-lg shadow-2xl max-h-[90vh] object-contain border border-white/30"
+                        alt="Popup Image">
+                    <button id="close-btn"
+                        class="absolute top-2 right-2 bg-white/70 hover:bg-white text-gray-800 font-bold rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+                        ✕
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guest Appreciation Section -->
+        <section class="mt-5 mb-10 text-center px-6 fade-section">
+            <div class="relative w-full max-w-[500px] mx-auto">
+                <!-- Background photo with gentle fade top & bottom -->
+                <div class="overflow-hidden relative rounded-lg">
+                    <img src="9.jpg" alt="Bride and Groom" class="w-full h-auto object-cover">
+
+                    <!-- Bottom soft blur gradient -->
+                    <div
+                        class="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-white via-white/60 to-transparent backdrop-blur-[0.5px]">
+                    </div>
+
+                    <!-- Top soft blur gradient -->
+                    <div
+                        class="absolute top-0 left-0 w-full h-1/4 bg-gradient-to-b from-white via-white/50 to-transparent backdrop-blur-[0.5px]">
+                    </div>
+                </div>
+
+                <!-- Message -->
+                <p class="mt-6 text-gray-800 text-[0.95rem] leading-relaxed font-medium">
+                    Sự hiện diện của quý khách là món quà ý nghĩa và là lời chúc phúc tuyệt vời nhất đối với gia đình
+                    chúng tôi.<br>
+                    Xin kính chúc quý khách cùng gia đình luôn bình an và hạnh phúc.<br>
+                    Rất hân hạnh được đón tiếp!
+                </p>
+            </div>
+        </section>
+
+
+
+        <footer class="mt-10 border-t border-gray-400 pt-4 pb-6 text-center">
+            <div class="flex justify-center items-center space-x-4">
+                <!-- TikTok -->
+                <a href="https://www.instagram.com/cloudy.weddingfilm?igsh=cndrODQ5Nnlrbzdt" target="_blank">
+                    <img src="ig.jpg" alt="IG" class="w-6 h-6 hover:opacity-80 transition">
+                </a>
+
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/CloudyWeddingFilm?_rdc=1&_rdr#" target="_blank">
+                    <img src="facebook.png" alt="Facebook" class="w-6 h-6 hover:opacity-80 transition">
+                </a>
+
+                <!-- Divider Line -->
+                <span class="text-gray-500">|</span>
+
+                <!-- Brand Text -->
+                <p class="text-[0.9rem] text-gray-800 font-medium tracking-wide">
+                    Cloundy Wedding Film
+                </p>
+            </div>
+        </footer>
+
+        <div class="fixed bottom-6 left-4 z-50">
+            <!-- Music Toggle -->
+            <button id="music-toggle"
+                class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-300 hover:scale-105 transition">
+                <img id="music-icon" src="music-off.png" alt="Toggle Music" class="w-5 h-5">
+            </button>
+        </div>
+
+        <div class="fixed bottom-6 right-4 z-50">
+            <!-- Scroll to Top -->
+            <button onclick="scrollToTop()"
+                class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center border border-gray-300 hover:scale-105 transition">
+                <img src="arrow-up.png" alt="Back to Top" class="w-5 h-5">
+            </button>
+        </div>
+
+        <audio id="bg-music" controls autoplay>
+            <source src="wedding-song.mp3" type="audio/mpeg">
+        </audio>
+    </section>
+    <script>
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dots = document.querySelectorAll('.dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.style.opacity = i === index ? '1' : '0';
+                dots[i].classList.toggle('bg-gray-400', i === index);
+                dots[i].classList.toggle('bg-gray-300', i !== index);
+            });
+        }
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                showSlide(currentSlide);
+            });
+        });
+
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }, 4000);
+        const targetDate = new Date("November 21, 2025 00:00:00").getTime();
+
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("countdown").innerHTML = "<p class='text-gray-700 italic'>Chúc Mừng Ngày Trọng Đại!</p>";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = days.toString().padStart(2, "0");
+            document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+            document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+            document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+        }, 1000);
+
+        const giftButton = document.getElementById("giftButton");
+        const giftModal = document.getElementById("giftModal");
+        const closeModal = document.getElementById("closeModal");
+
+        giftButton.addEventListener("click", () => {
+            giftModal.classList.remove("hidden");
+            giftModal.classList.add("flex");
+        });
+
+        closeModal.addEventListener("click", () => {
+            giftModal.classList.add("hidden");
+        });
+
+        window.addEventListener("click", (e) => {
+            if (e.target === giftModal) giftModal.classList.add("hidden");
+        });
+
+        const popup = document.getElementById('popup');
+        const popupImg = document.getElementById('popup-img');
+        const closeBtn = document.getElementById('close-btn');
+        const images = document.querySelectorAll('#gallery img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                popupImg.src = img.src;
+                popup.classList.remove('hidden');
+                popup.classList.add('flex');
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('flex');
+            popup.classList.add('hidden');
+        });
+
+        popup.addEventListener('click', (e) => {
+            if (e.target === popup) {
+                popup.classList.remove('flex');
+                popup.classList.add('hidden');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Music Toggle
+        const music = document.getElementById("bg-music");
+        const toggle = document.getElementById("music-toggle");
+        const icon = document.getElementById("music-icon");
+        let playing = false;
+
+        // Try autoplay muted first (allowed by browsers)
+        window.addEventListener("load", () => {
+            music.play().then(() => {
+                console.log("Music autoplayed silently ✅");
+                playing = true;
+                icon.src = "music-on.png";
+            }).catch(err => {
+                console.log("Muted autoplay failed, waiting for user gesture.");
+            });
+        });
+
+        // Manual toggle button
+        toggle.addEventListener("click", () => {
+            if (!playing) {
+                music.play();
+                music.muted = false;
+                icon.src = "music-on.png";
+                playing = true;
+            } else {
+                music.pause();
+                icon.src = "music-off.png";
+                playing = false;
+            }
+        });
+
+        const fadeSections = document.querySelectorAll('.fade-section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // animate once
+                }
+            });
+        }, {
+            threshold: 0.2 // trigger when 20% of element is visible
+        });
+
+        fadeSections.forEach(section => observer.observe(section));
+    </script>
+</body>
+
+</html>
